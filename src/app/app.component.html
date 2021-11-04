@@ -1,5 +1,5 @@
 <h1>{{title}}</h1>
-   <div *ngIf="success">Successfully added user</div>
+<!--   <div *ngIf="success">Successfully added user</div>
    <div *ngIf="success; else showValue">Successfully added user</div>
    <ng-template #showValue>It is false</ng-template>
 
@@ -21,4 +21,12 @@
 
    <div [ngStyle]="{'backrground-color':'green','color':'#fff'}">This is green</div>
    <div [ngClass]="'one'"></div>
+   <button (click) = "printHello()">Click Here</button>
+   <input [(ngModel)]="uName" />
+   <div>{{uName}}</div> -->
+
+   <p>{{iamhappy|uppercase}}</p>
+   <p>{{percentExample|percent:'2.2-3'}}</p>
+   <p>{{dateExample|date:'short'}}</p>
+   <p>{{dateExample|date:'mm/dd/yy'}}</p>
 <router-outlet></router-outlet>

@@ -8,7 +8,15 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'simpleCRM';
   superPower:String="Hulk";
+  iamhappy ="iamverysad";
+  percentExample =0.454;
+  dateExample=Date.now();
   success:boolean=true;
+  uName ="";
+   printHello(){
+     console.log("Hi there i am santhosh");
+   }
+
   contacts=[
     {
       "firstName":"Sarath",
