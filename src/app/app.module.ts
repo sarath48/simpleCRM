@@ -1,21 +1,24 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-
+import { LoansComponent } from './loans/loans.component';
+import { LoansListComponent } from './loans-list/loans-list.component';
+import { PathLocationStrategy, HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoansComponent,
+    LoansListComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
-  providers: [],
+  providers: [{provide : LocationStrategy, useClass:PathLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

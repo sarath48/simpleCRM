@@ -23,10 +23,14 @@
    <div [ngClass]="'one'"></div>
    <button (click) = "printHello()">Click Here</button>
    <input [(ngModel)]="uName" />
-   <div>{{uName}}</div> -->
+   <div>{{uName}}</div> 
 
    <p>{{iamhappy|uppercase}}</p>
    <p>{{percentExample|percent:'2.2-3'}}</p>
    <p>{{dateExample|date:'short'}}</p>
-   <p>{{dateExample|date:'mm/dd/yy'}}</p>
+   <p>{{dateExample|date:'M/dd/yy'}}</p> 
+ 
+<router-outlet name ="route1"></router-outlet> 
+<router-outlet name ="route2"></router-outlet> -->
+
 <router-outlet></router-outlet>

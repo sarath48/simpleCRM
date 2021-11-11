@@ -1,10 +1,42 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
-const routes: Routes = [];
+import { RouterModule,Routes} from '@angular/router';
+import { LoansComponent } from './loans/loans.component';
+import { LoansListComponent } from './loans-list/loans-list.component';
+
+const routes:Routes =[
+  {
+    path:'loans/:user',
+    component:LoansComponent
+  },
+  {
+    path:'loans/:photoId/product/:productId',
+    component:LoansComponent
+  },
+  {path:"loans",
+   component:LoansComponent
+  },
+  {path:"loans",
+  children:[
+    {
+      path:'loanslist',
+      component:LoansListComponent
+    }
+  ]
+  },
+  {
+    path:'new-loan',
+    redirectTo:'loans'
+  }
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  declarations: [],
+  imports: [
+    CommonModule,
+    RouterModule.forRoot(routes)
+  ],
+  exports:[RouterModule]
 })
 export class AppRoutingModule { }
