@@ -6,17 +6,23 @@ import { LoansComponent } from './loans/loans.component';
 import { LoansListComponent } from './loans-list/loans-list.component';
 import { PathLocationStrategy, HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
+import { SearchComponent } from './search/search.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoansComponent,
-    LoansListComponent
+    LoansListComponent,
+    SearchComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatSlideToggleModule
   ],
   providers: [{provide : LocationStrategy, useClass:PathLocationStrategy}],
   bootstrap: [AppComponent]
