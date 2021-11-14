@@ -43,7 +43,7 @@ const routes:Routes =[
     redirectTo:'loans'
   },
   { path: 'payment',
-    canLoad:[AuthGuard], 
+     
     loadChildren: () => import('./payments/payments.module').then(m => m.PaymentsModule) },
   {
     path:'**',
