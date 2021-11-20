@@ -26,18 +26,22 @@ const routes:Routes =[
     path:'loans/:photoId/product/:productId',
     component:LoansComponent
   },
-  {path:"loans",
+  {path:'loans',
    component:LoansComponent,
    canActivate:[AuthGuard]
   },
-  {path:"loans",
+  {
+    path:'loanslist',
+    component:LoansListComponent
+  },
+  /*{path:'loans',
   children:[
     {
       path:'loanslist',
       component:LoansListComponent
     }
   ]
-  },
+  },*/
   {
     path:'new-loan',
     redirectTo:'loans'
